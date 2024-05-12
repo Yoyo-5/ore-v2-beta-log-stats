@@ -68,11 +68,11 @@ foreach ($lines as $nb => $line) {
             $rewardsByDifficulty[$previousDifficulty] = array($reward);
         }
         $previousBalance = $balance;
+        $totalNumberOfHashes++;
     }
     if ($reward !== null && $reward == 0) {
         $noRewardCount++;}
     ($nb == count($lines) - 1) ? $totalRewards = $balance : null;
-    $totalNumberOfHashes++;
 }
 
 // Display the results
